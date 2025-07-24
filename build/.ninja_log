@@ -1,0 +1,12 @@
+# ninja log v6
+1	88	1753187211128791969	calcu_autogen/timestamp	ca1fb91a1c4c2e05
+25	28	1751882649094640846	/home/admin/Рабочий стол/calcu/build/qrc_qml.cpp	a95eb97b98416bc9
+1	88	1753187211128791969	calcu_autogen/mocs_compilation.cpp	ca1fb91a1c4c2e05
+1	88	1753187211128791969	/home/admin/Рабочий стол/calcu/build/calcu_autogen/mocs_compilation.cpp	ca1fb91a1c4c2e05
+1	88	1753187211128791969	/home/admin/Рабочий стол/calcu/build/calcu_autogen/timestamp	ca1fb91a1c4c2e05
+25	28	1751882649094640846	qrc_qml.cpp	a95eb97b98416bc9
+28	44	1751882649094640846	CMakeFiles/calcu.dir/qrc_qml.cpp.o	d13c153be05b9bb6
+756	973	1753187211802113706	calcu	16758ef003f3c594
+89	559	1753187211135458521	CMakeFiles/calcu.dir/calcu_autogen/mocs_compilation.cpp.o	1c4de815d1ecfc19
+89	616	1753187211135458521	CMakeFiles/calcu.dir/src/c++/calculated.cpp.o	37a9be62631c67d9
+89	756	1753187211135458521	CMakeFiles/calcu.dir/src/c++/main.cpp.o	5a6a8ae0caa948e8
