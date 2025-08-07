@@ -387,85 +387,24 @@ calcu_autogen/timestamp: /home/ilya/Рабочий\ стол/Projects/Calculator
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/syslimits.h \
-  /usr/share/cmake/Modules/CMakeCXXCompiler.cmake.in \
-  /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp \
   /usr/share/cmake/Modules/CMakeCXXInformation.cmake \
   /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake \
-  /usr/share/cmake/Modules/CMakeCompilerIdDetection.cmake \
-  /usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake \
-  /usr/share/cmake/Modules/CMakeDetermineCompiler.cmake \
-  /usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake \
-  /usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake \
-  /usr/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake \
-  /usr/share/cmake/Modules/CMakeDetermineSystem.cmake \
-  /usr/share/cmake/Modules/CMakeFindBinUtils.cmake \
   /usr/share/cmake/Modules/CMakeGenericSystem.cmake \
   /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake \
   /usr/share/cmake/Modules/CMakeLanguageInformation.cmake \
   /usr/share/cmake/Modules/CMakeParseArguments.cmake \
-  /usr/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake \
-  /usr/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake \
-  /usr/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake \
-  /usr/share/cmake/Modules/CMakeSystem.cmake.in \
   /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake \
   /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake \
-  /usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake \
-  /usr/share/cmake/Modules/CMakeTestCompilerCommon.cmake \
-  /usr/share/cmake/Modules/CMakeUnixFindMake.cmake \
-  /usr/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake \
   /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-  /usr/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
-  /usr/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
   /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake \
-  /usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake \
   /usr/share/cmake/Modules/Compiler/GNU.cmake \
-  /usr/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-  /usr/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-  /usr/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
   /usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake \
   /usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake \
-  /usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake \
-  /usr/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake \
-  /usr/share/cmake/Modules/Internal/FeatureTesting.cmake \
   /usr/share/cmake/Modules/Linker/GNU-CXX.cmake \
   /usr/share/cmake/Modules/Linker/GNU.cmake \
   /usr/share/cmake/Modules/Platform/Linker/GNU.cmake \
   /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-CXX.cmake \
   /usr/share/cmake/Modules/Platform/Linker/Linux-GNU.cmake \
-  /usr/share/cmake/Modules/Platform/Linux-Determine-CXX.cmake \
   /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake \
   /usr/share/cmake/Modules/Platform/Linux-GNU.cmake \
   /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake \
@@ -481,75 +420,21 @@ calcu_autogen/timestamp: /home/ilya/Рабочий\ стол/Projects/Calculator
 
 /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake:
 
-/usr/share/cmake/Modules/Platform/Linux-Determine-CXX.cmake:
-
 /usr/share/cmake/Modules/Platform/Linker/Linux-GNU.cmake:
 
 /usr/share/cmake/Modules/Platform/Linker/GNU.cmake:
 
-/usr/share/cmake/Modules/Internal/FeatureTesting.cmake:
-
-/usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:
-
 /usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake:
-
-/usr/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake:
-
-/usr/share/cmake/Modules/Compiler/GNU-CXX.cmake:
-
-/usr/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake:
 
 /usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake:
 
-/usr/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake:
-
-/usr/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/CMakeTestCompilerCommon.cmake:
+/usr/share/cmake/Modules/Compiler/GNU-CXX.cmake:
 
 /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake:
-
-/usr/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake:
 
 /usr/share/cmake/Modules/CMakeLanguageInformation.cmake:
 
 /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake:
-
-/usr/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake:
-
-/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:
-
-/usr/share/cmake/Modules/CMakeDetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/CMakeCompilerIdDetection.cmake:
-
-/usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stddef.h:
 
@@ -621,8 +506,6 @@ calcu_autogen/timestamp: /home/ilya/Рабочий\ стол/Projects/Calculator
 
 /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-CXX.cmake:
 
-/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:
-
 /usr/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake:
 
 /usr/lib/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake:
@@ -639,8 +522,6 @@ calcu_autogen/timestamp: /home/ilya/Рабочий\ стол/Projects/Calculator
 
 /usr/lib/cmake/Qt5/Qt5Config.cmake:
 
-/usr/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake:
-
 /usr/include/wchar.h:
 
 /usr/include/unistd.h:
@@ -656,8 +537,6 @@ calcu_autogen/timestamp: /home/ilya/Рабочий\ стол/Projects/Calculator
 /usr/include/string.h:
 
 /usr/include/stdc-predef.h:
-
-/usr/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake:
 
 /usr/include/wctype.h:
 
@@ -685,8 +564,6 @@ calcu_autogen/timestamp: /home/ilya/Рабочий\ стол/Projects/Calculator
 
 /usr/include/qt/QtCore/qstringliteral.h:
 
-/usr/share/cmake/Modules/CMakeSystem.cmake.in:
-
 /usr/include/qt/QtCore/qstringalgorithms.h:
 
 /usr/include/qt/QtCore/qstring.h:
@@ -698,8 +575,6 @@ calcu_autogen/timestamp: /home/ilya/Рабочий\ стол/Projects/Calculator
 /usr/include/qt/QtCore/qprocessordetection.h:
 
 /usr/include/qt/QtCore/qnamespace.h:
-
-/usr/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake:
 
 /usr/lib/cmake/Qt5Qml/Qt5Qml_QQuickProfilerAdapterFactory.cmake:
 
@@ -715,8 +590,6 @@ calcu_autogen/timestamp: /home/ilya/Рабочий\ стол/Projects/Calculator
 
 /usr/include/qt/QtCore/qflags.h:
 
-/usr/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake:
-
 /usr/include/qt/QtCore/qcontainertools_impl.h:
 
 /usr/include/qt/QtCore/qcompilerdetection.h:
@@ -725,13 +598,9 @@ calcu_autogen/timestamp: /home/ilya/Рабочий\ стол/Projects/Calculator
 
 /usr/include/qt/QtCore/qbytearraylist.h:
 
-/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:
-
 /usr/include/qt/QtCore/qbasicatomic.h:
 
 /usr/include/qt/QtCore/qatomic_cxx11.h:
-
-/usr/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake:
 
 /usr/include/c++/15.1.1/bits/move.h:
 
@@ -756,8 +625,6 @@ calcu_autogen/timestamp: /home/ilya/Рабочий\ стол/Projects/Calculator
 /usr/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake:
 
 /usr/include/c++/15.1.1/backward/auto_ptr.h:
-
-/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:
 
 /usr/include/c++/15.1.1/bits/nested_exception.h:
 
@@ -795,8 +662,6 @@ calcu_autogen/timestamp: /home/ilya/Рабочий\ стол/Projects/Calculator
 
 /usr/include/c++/15.1.1/bits/alloc_traits.h:
 
-/usr/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake:
-
 /usr/include/asm/errno.h:
 
 /usr/include/c++/15.1.1/pstl/glue_numeric_defs.h:
@@ -817,15 +682,11 @@ calcu_autogen/timestamp: /home/ilya/Рабочий\ стол/Projects/Calculator
 
 /usr/include/bits/types/struct_tm.h:
 
-/usr/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake:
-
 CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 
 /usr/include/c++/15.1.1/bits/max_size_type.h:
 
 /usr/include/c++/15.1.1/bits/basic_string.tcc:
-
-/usr/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake:
 
 /usr/include/c++/15.1.1/bits/functexcept.h:
 
@@ -835,11 +696,7 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 
 /usr/include/bits/types/struct_timespec.h:
 
-/usr/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake:
-
 /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake:
-
-/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:
 
 /usr/include/c++/15.1.1/clocale:
 
@@ -882,8 +739,6 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 /usr/include/c++/15.1.1/ext/string_conversions.h:
 
 /usr/include/bits/confname.h:
-
-/usr/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake:
 
 /usr/include/c++/15.1.1/stdexcept:
 
@@ -943,10 +798,6 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /usr/include/bits/types/__locale_t.h:
 
-/usr/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/CMakeUnixFindMake.cmake:
-
 /usr/include/c++/15.1.1/bits/uses_allocator_args.h:
 
 /usr/include/c++/15.1.1/bit:
@@ -960,8 +811,6 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 /usr/include/bits/types/struct___jmp_buf_tag.h:
 
 /usr/include/bits/setjmp.h:
-
-/usr/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake:
 
 /usr/include/c++/15.1.1/bits/ranges_uninitialized.h:
 
@@ -981,8 +830,6 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/error_constants.h:
 
-/usr/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake:
-
 /home/ilya/Рабочий\ стол/Projects/Calculator-C-QML/src/c++/calculated.cpp:
 
 /usr/include/c++/15.1.1/ios:
@@ -996,8 +843,6 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 /usr/include/bits/types/struct_timeval.h:
 
 /usr/include/c++/15.1.1/bits/locale_classes.h:
-
-/usr/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake:
 
 /usr/include/bits/floatn.h:
 
@@ -1018,8 +863,6 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 /usr/include/c++/15.1.1/bits/stl_iterator_base_funcs.h:
 
 /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++allocator.h:
-
-/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:
 
 /usr/include/c++/15.1.1/bits/atomic_base.h:
 
@@ -1053,8 +896,6 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /usr/include/bits/timesize.h:
 
-/usr/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake:
-
 /usr/include/c++/15.1.1/bits/std_function.h:
 
 /usr/include/c++/15.1.1/iosfwd:
@@ -1064,8 +905,6 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 /usr/include/c++/15.1.1/bits/list.tcc:
 
 /usr/include/c++/15.1.1/array:
-
-/usr/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake:
 
 /usr/include/c++/15.1.1/bits/stl_function.h:
 
@@ -1087,17 +926,11 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /usr/include/asm/posix_types_64.h:
 
-/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:
-
 /usr/include/c++/15.1.1/optional:
-
-/usr/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake:
 
 calcu_autogen/moc_predefs.h:
 
 /usr/include/qt/QtCore/qalgorithms.h:
-
-/usr/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake:
 
 /usr/include/asm/posix_types.h:
 
@@ -1119,8 +952,6 @@ calcu_autogen/moc_predefs.h:
 
 /usr/include/bits/types.h:
 
-/usr/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake:
-
 /usr/include/features.h:
 
 /usr/include/bits/sched.h:
@@ -1134,8 +965,6 @@ calcu_autogen/moc_predefs.h:
 /usr/include/c++/15.1.1/bits/cxxabi_forced.h:
 
 /usr/include/c++/15.1.1/bits/stl_numeric.h:
-
-/usr/share/cmake/Modules/CMakeCXXCompiler.cmake.in:
 
 /home/ilya/Рабочий\ стол/Projects/Calculator-C-QML/src/c++/main.cpp:
 
@@ -1190,10 +1019,6 @@ calcu_autogen/moc_predefs.h:
 /usr/include/c++/15.1.1/bits/ranges_util.h:
 
 /usr/include/c++/15.1.1/bits/refwrap.h:
-
-/usr/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake:
 
 /usr/include/qt/QtCore/qobject_impl.h:
 
@@ -1261,8 +1086,6 @@ calcu_autogen/moc_predefs.h:
 
 /usr/share/cmake/Modules/Linker/GNU.cmake:
 
-/usr/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake:
-
 /usr/include/qt/QtCore/qstringmatcher.h:
 
 /usr/include/qt/QtCore/qobjectdefs.h:
@@ -1311,8 +1134,6 @@ calcu_autogen/moc_predefs.h:
 
 /usr/include/c++/15.1.1/cstddef:
 
-/usr/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake:
-
 /usr/include/asm/bitsperlong.h:
 
 /usr/include/c++/15.1.1/cstdint:
@@ -1337,13 +1158,9 @@ calcu_autogen/moc_predefs.h:
 
 /usr/include/c++/15.1.1/functional:
 
-/usr/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake:
-
 /usr/share/cmake/Modules/CMakeCXXInformation.cmake:
 
 /usr/include/c++/15.1.1/initializer_list:
-
-/usr/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake:
 
 /usr/include/c++/15.1.1/iterator:
 

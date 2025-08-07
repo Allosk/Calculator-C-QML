@@ -9,8 +9,12 @@ Window {
     visible: true
     title: qsTr("Calculator")
     minimumWidth: 360
-    minimumHeight: 616
+    minimumHeight: 610
     color: "#024873"
+
+    property bool secretModeWaiting: false
+    property string secretInput: ""
+
     Calculated {
         id: calcEngine
     }
@@ -22,6 +26,18 @@ Window {
     }
 
     function inputDigit(d) {
+        if (secretModeWaiting) {
+            secretInput += d
+            if (secretInput.length > 3)
+                secretInput = secretInput.slice(secretInput.length - 3)
+            if (secretInput === "123") {
+                secretModeWaiting = false
+                secretModeTimer.stop()
+                openSecretMenu()
+                return
+            }
+        }
+
         if (currentText === "0") {
             currentText = d
         } else {
@@ -68,12 +84,9 @@ Window {
             currentText = currentText.slice(0, -1)
         }
         var expr = currentText.replace(/÷/g, "/")
-        calcEngine.calc(expr)
-        if (calcEngine.solution.length > 0 && calcEngine.solution !== "Ошибка") {
-            currentText = calcEngine.solution
-        } else if (calcEngine.solution === "Ошибка") {
-            currentText = "0"
-        }
+        calcEngine.calc(expr)     
+        calcEngine.calculate()     
+
     }
 
     function wrapExpression() {
@@ -97,6 +110,7 @@ Window {
         } else {
         }
     }
+
     function inputPercent() {
         let match = currentText.match(/([\d.]+)\s*([+\-*/])\s*([\d.]*)$/);
         if (match) {
@@ -109,6 +123,7 @@ Window {
             currentText = (num / 100).toString();
         }
     }
+
     function toggleSign() {
         if (/^-?\d+(\.\d+)?$/.test(currentText)) {
             if (currentText.charAt(0) === "-")
@@ -139,238 +154,464 @@ Window {
         }
     }
 
-    Item {
-        anchors.fill: parent
+    function openSecretMenu() {
+        stackView.push(secretMenuPage)
+    }
 
-        AreaTextItem {
-            id: textDisplay
-            text: currentText
-            fontSize: 36
-            width: parent.width
-            height: 156 
+    Timer {
+        id: secretModeTimer
+        interval: 5000
+        running: false
+        repeat: false
+        onTriggered: {
+            secretModeWaiting = false
+            secretInput = ""
         }
+    }
 
-        Item{
-            anchors {
-                top: textDisplay.bottom
-                left: parent.left
-                right: parent.right
-                bottom: parent.bottom
-                margins: 24
-            }
+    StackView {
+        id: stackView
+        anchors.fill: parent
+        initialItem: mainPage
+    }
 
-        Popup {
-            id: parenPopup
-            modal: true
-            focus: true
-            x: (root.width - width) / 2
-            y: (root.height - height) / 2
-            width: 200
-            height: 120
+    Component{
+        id: secretMenuPage
+
+        Item {
             visible: false
 
             Rectangle {
                 anchors.fill: parent
-                color: "#ffffff"
-                radius: 8
-                border.color: "#cccccc"
+                color: "#024873"
 
                 Column {
-                    anchors.fill: parent
-                    anchors.margins: 8
-                    spacing: 8
+                    anchors.centerIn: parent
+                    spacing: 20
+
+                    Label {
+                        text: "Секретное меню"
+                        font.pixelSize: 30
+                        color: "white"
+                        horizontalAlignment: Text.AlignHCenter
+                    }
 
                     Button {
-                        text: "("
+                        text: "Назад"
                         onClicked: {
-                            insertLeftParen()
-                            parenPopup.close()
+                            stackView.pop()
                         }
                     }
-                    Button {
-                        text: ")"
-                        onClicked: {
-                            insertRightParen()
-                            parenPopup.close()
-                        }
-                    }
-                }
-            }
-
-            onClosed: visible = false
-        }
-
-            GridLayout {
-                id: grid
-                anchors.fill: parent
-                columns: 4
-                rows: 5
-                columnSpacing: 24
-                rowSpacing: 24
-
-                CalcButton {
-                    buttonText: "()"
-                    buttonColor: "#0889A6"
-                    textColor: "#FFFFFF"
-                    Layout.column: 0; Layout.row: 0
-                    Layout.fillWidth: true; Layout.fillHeight: true
-                    Layout.alignment: Qt.AlignCenter
-                    onClicked: wrapExpression()
-                    onLongPressed: parenPopup.open()
-                }
-                CalcButton {
-                    buttonText: "+/-"
-                    buttonColor: "#0889A6"
-                    textColor: "#FFFFFF"
-                    Layout.column: 1; Layout.row: 0
-                    Layout.fillWidth: true; Layout.fillHeight: true
-                    onClicked: toggleSign()
-                }
-                CalcButton {
-                    buttonText: "%"
-                    buttonColor: "#0889A6"
-                    textColor: "#FFFFFF"
-                    Layout.column: 2; Layout.row: 0
-                    Layout.fillWidth: true; Layout.fillHeight: true
-                    onClicked: inputPercent()
-                }
-                CalcButton {
-                    buttonText: "÷"
-                    buttonColor: "#0889A6"
-                    textColor: "#FFFFFF"
-                    Layout.column: 3; Layout.row: 0
-                    Layout.fillWidth: true; Layout.fillHeight: true
-                    onClicked: inputOperator("÷")
-                }
-
-                CalcButton { 
-                    buttonText: "*" 
-                    Layout.column: 3
-                    Layout.row: 1
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    onClicked: inputOperator("*") 
-                }
-                CalcButton { 
-                    buttonText: "-" 
-                    Layout.column: 3
-                    Layout.row: 2; Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    onClicked: inputOperator("-") 
-                }
-                CalcButton { 
-                    buttonText: "+" 
-                    Layout.column: 3
-                    Layout.row: 3; Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    onClicked: inputOperator("+") 
-                }
-
-                CalcButton {
-                    buttonText: "="
-                    Layout.column: 3; Layout.row: 4
-                    Layout.fillWidth: true; Layout.fillHeight: true
-                    onClicked: calculateResult()
-                }
-                CalcButton {
-                    buttonText: "C"
-                    buttonColor: "#F25E5E"
-                    buttonOpacity: 0.5
-                    textColor: "#FFFFFF"
-                    Layout.column: 0; Layout.row: 4
-                    Layout.fillWidth: true; Layout.fillHeight: true
-                    onClicked: clearCalculator()
-                }
-
-                CalcButton { 
-                    buttonText: "7" 
-                    Layout.column: 0
-                    Layout.row: 1
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    onClicked: inputDigit("7") 
-                }
-                CalcButton { 
-                    buttonText: "8" 
-                    Layout.column: 1
-                    Layout.row: 1
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    onClicked: inputDigit("8") 
-                }
-                CalcButton { 
-                    buttonText: "9" 
-                    Layout.column: 2
-                    Layout.row: 1
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    onClicked: inputDigit("9") 
-                }
-
-                CalcButton { 
-                    buttonText: "4" 
-                    Layout.column: 0
-                    Layout.row: 2
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    onClicked: inputDigit("4") 
-                }
-                CalcButton { 
-                    buttonText: "5" 
-                    Layout.column: 1
-                    Layout.row: 2
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    onClicked: inputDigit("5") 
-                }
-                CalcButton { 
-                    buttonText: "6" 
-                    Layout.column: 2
-                    Layout.row: 2
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    onClicked: inputDigit("6") 
-                }
-
-                CalcButton { 
-                    buttonText: "1" 
-                    Layout.column: 0
-                    Layout.row: 3
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    onClicked: inputDigit("1") 
-                }
-                CalcButton { 
-                    buttonText: "2" 
-                    Layout.column: 1
-                    Layout.row: 3
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    onClicked: inputDigit("2") 
-                }
-                CalcButton { 
-                    buttonText: "3" 
-                    Layout.column: 2
-                    Layout.row: 3
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    onClicked: inputDigit("3") 
-                }
-
-                CalcButton {
-                    buttonText: "0"
-                    Layout.column: 1; Layout.row: 4
-                    Layout.fillWidth: true; Layout.fillHeight: true
-                    onClicked: inputDigit("0")
-                }
-                CalcButton {
-                    buttonText: "."
-                    Layout.column: 2; Layout.row: 4
-                    Layout.fillWidth: true; Layout.fillHeight: true
-                    onClicked: inputDot()
                 }
             }
         }
 
     }
+
+    Component {
+        id: mainPage
+
+        Item {
+
+            AreaTextItem {
+                id: textDisplay
+                expression: currentText
+                result: calcEngine.solution.length > 0 && calcEngine.solution !== "Ошибка" ? calcEngine.solution : "0"
+                width: parent.width
+                height: 156 
+            }
+            Item{
+                anchors {
+                    top: textDisplay.bottom
+                    left: parent.left
+                    right: parent.right
+                    bottom: parent.bottom
+                    margins: 24
+                }
+
+Popup {
+    id: parenPopup
+    modal: true
+    focus: true
+    visible: false
+    width: parent.width
+    height: parent.height
+    background: Rectangle {
+        color: "#00000080"
+    }
+
+    Rectangle {
+        width: 120
+        height: 104
+        anchors.centerIn: parent
+        color: "#024873"
+        radius: 10
+        border.color: "#0889A6"
+        border.width: 2
+
+        Column {
+            anchors.centerIn: parent
+            spacing: 8
+
+            Button {
+                text: "("
+                font.pixelSize: 20
+                width: 100
+                height: 40
+                background: Rectangle {
+                    color: "#0889A6"
+                    radius: 6
+                }
+                onClicked: {
+                    insertLeftParen()
+                    parenPopup.close()
+                }
+            }
+
+            Button {
+                text: ")"
+                font.pixelSize: 20
+                width: 100
+                height: 40
+                background: Rectangle {
+                    color: "#0889A6"
+                    radius: 6
+                }
+                onClicked: {
+                    insertRightParen()
+                    parenPopup.close()
+                }
+            }
+        }
+    }
+
+    onClosed: visible = false
+}
+
+
+
+
+                GridLayout {
+                    id: grid
+                    anchors.fill: parent
+                    columns: 4
+                    rows: 5
+                    columnSpacing: 24
+                    rowSpacing: 24
+
+                    CalcButton {
+                        buttonText: ""
+                        buttonColor: "#0889A6"
+                        textColor: "#FFFFFF"
+                        fontSize: 30
+                        Layout.column: 0; Layout.row: 0
+                        Layout.fillWidth: true; Layout.fillHeight: true
+                        Layout.alignment: Qt.AlignCenter
+
+                        Item {
+                            anchors.fill: parent
+
+                            Image {
+                                source: "assets/bkt.svg"
+                                width: 30
+                                height: 30
+                                fillMode: Image.PreserveAspectFit
+                                smooth: true
+                                anchors.centerIn: parent
+                            }
+                        }
+
+                        onClicked: wrapExpression()
+                        onLongPressed: parenPopup.open()
+                    }
+                    CalcButton {
+                        buttonText: ""
+                        buttonColor: "#0889A6"
+                        textColor: "#FFFFFF"
+                        fontSize: 30
+                        Layout.column: 1; Layout.row: 0
+                        Layout.fillWidth: true; Layout.fillHeight: true
+
+                        Item {
+                            anchors.fill: parent
+
+                            Image {
+                                source: "assets/plus_minus.svg"
+                                width: 30
+                                height: 30
+                                fillMode: Image.PreserveAspectFit
+                                smooth: true
+                                anchors.centerIn: parent
+                            }
+                        }
+
+                        onClicked: toggleSign()
+                    }
+                    CalcButton {
+                        buttonText: ""
+                        buttonColor: "#0889A6"
+                        textColor: "#FFFFFF"
+                        fontSize: 30
+                        Layout.column: 2; Layout.row: 0
+                        Layout.fillWidth: true; Layout.fillHeight: true
+
+                        Item {
+                            anchors.fill: parent
+
+                            Image {
+                                source: "assets/percent.svg"
+                                width: 30
+                                height: 30
+                                fillMode: Image.PreserveAspectFit
+                                smooth: true
+                                anchors.centerIn: parent
+                            }
+                        }
+
+                        onClicked: inputPercent()
+                    }
+                    CalcButton {
+                        buttonText: ""
+                        buttonColor: "#0889A6"
+                        textColor: "#FFFFFF"
+                        fontSize: 30
+                        Layout.column: 3; Layout.row: 0
+                        Layout.fillWidth: true; Layout.fillHeight: true
+
+                        Item {
+                            anchors.fill: parent
+
+                            Image {
+                                source: "assets/division.svg"
+                                width: 30
+                                height: 30
+                                fillMode: Image.PreserveAspectFit
+                                smooth: true
+                                anchors.centerIn: parent
+                            }
+                        }
+
+                        onClicked: inputOperator("÷")
+                    }
+
+                    CalcButton { 
+                        buttonText: "" 
+                        buttonColor: "#0889A6"
+                        textColor: "#FFFFFF"
+                        fontSize: 30
+                        Layout.column: 3
+                        Layout.row: 1
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+
+                        Item {
+                            anchors.fill: parent
+
+                            Image {
+                                source: "assets/multiply.svg"
+                                width: 30
+                                height: 30
+                                fillMode: Image.PreserveAspectFit
+                                smooth: true
+                                anchors.centerIn: parent
+                            }
+                        }
+
+                        onClicked: inputOperator("*") 
+                    }
+                    CalcButton { 
+                        buttonText: ""
+                        buttonColor: "#0889A6"
+                        textColor: "#FFFFFF"
+                        fontSize: 30 
+                        Layout.column: 3
+                        Layout.row: 2; Layout.fillWidth: true
+                        Layout.fillHeight: true
+
+                        Item {
+                            anchors.fill: parent
+
+                            Image {
+                                source: "assets/minus.svg"
+                                width: 30
+                                height: 30
+                                fillMode: Image.PreserveAspectFit
+                                smooth: true
+                                anchors.centerIn: parent
+                            }
+                        }
+
+                        onClicked: inputOperator("-") 
+                    }
+                    CalcButton {
+                        buttonText: ""
+                        buttonColor: "#0889A6"
+                        textColor: "#FFFFFF"
+                        fontSize: 30 
+                        Layout.column: 3
+                        Layout.row: 3
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+
+                        Item {
+                            anchors.fill: parent
+
+                            Image {
+                                source: "assets/plus.svg"
+                                width: 30
+                                height: 30
+                                fillMode: Image.PreserveAspectFit
+                                smooth: true
+                                anchors.centerIn: parent
+                            }
+                        }
+
+                        onClicked: inputOperator("+")
+                    }
+
+                    CalcButton {
+                        buttonText: ""
+                        buttonColor: "#0889A6"
+                        textColor: "#FFFFFF"
+                        fontSize: 30
+                        Layout.column: 3; Layout.row: 4
+                        Layout.fillWidth: true; Layout.fillHeight: true
+
+                        Item {
+                            anchors.fill: parent
+
+                            Image {
+                                source: "assets/equal.svg"
+                                width: 30
+                                height: 30
+                                fillMode: Image.PreserveAspectFit
+                                smooth: true
+                                anchors.centerIn: parent
+                            }
+                        }
+                        
+                        onClicked: {
+                            if (!secretModeWaiting) {
+                                calculateResult()
+                            }
+                        }
+                        onLongPressed: {
+                            secretModeWaiting = true
+                            secretInput = ""
+                            secretModeTimer.start()
+                            console.log("Долгое нажатие, режим ввода кода активирован")
+                        }
+                    }
+                    CalcButton {
+                        buttonText: "C"
+                        buttonColor: "#fbafac"
+                        textColor: "#FFFFFF"
+                        Layout.column: 0; Layout.row: 4
+                        Layout.fillWidth: true; Layout.fillHeight: true
+                        onClicked: clearCalculator()
+                    }
+
+                    CalcButton { 
+                        buttonText: "7" 
+                        textColor: "#024873"
+                        Layout.column: 0
+                        Layout.row: 1
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        onClicked: inputDigit("7") 
+                    }
+                    CalcButton { 
+                        buttonText: "8"
+                        textColor: "#024873"
+                        Layout.column: 1
+                        Layout.row: 1
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        onClicked: inputDigit("8") 
+                    }
+                    CalcButton { 
+                        buttonText: "9"
+                        textColor: "#024873"
+                        Layout.column: 2
+                        Layout.row: 1
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        onClicked: inputDigit("9") 
+                    }
+
+                    CalcButton { 
+                        buttonText: "4"
+                        textColor: "#024873"
+                        Layout.column: 0
+                        Layout.row: 2
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        onClicked: inputDigit("4") 
+                    }
+                    CalcButton { 
+                        buttonText: "5"
+                        textColor: "#024873"
+                        Layout.column: 1
+                        Layout.row: 2
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        onClicked: inputDigit("5") 
+                    }
+                    CalcButton { 
+                        buttonText: "6"
+                        textColor: "#024873"
+                        Layout.column: 2
+                        Layout.row: 2
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        onClicked: inputDigit("6") 
+                    }
+
+                    CalcButton { 
+                        buttonText: "1"
+                        textColor: "#024873"
+                        Layout.column: 0
+                        Layout.row: 3
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        onClicked: inputDigit("1") 
+                    }
+                    CalcButton { 
+                        buttonText: "2"
+                        textColor: "#024873"
+                        Layout.column: 1
+                        Layout.row: 3
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        onClicked: inputDigit("2") 
+                    }
+                    CalcButton { 
+                        buttonText: "3"
+                        textColor: "#024873"
+                        Layout.column: 2
+                        Layout.row: 3
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        onClicked: inputDigit("3") 
+                    }
+
+                    CalcButton {
+                        buttonText: "0"
+                        textColor: "#024873"
+                        Layout.column: 1; Layout.row: 4
+                        Layout.fillWidth: true; Layout.fillHeight: true
+                        onClicked: inputDigit("0")
+                    }
+                    CalcButton {
+                        buttonText: "."
+                        textColor: "#024873"
+                        Layout.column: 2; Layout.row: 4
+                        Layout.fillWidth: true; Layout.fillHeight: true
+                        onClicked: inputDot()
+                    }
+                }
+            }
+        }
+    }
+
 }

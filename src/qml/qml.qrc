@@ -3,5 +3,13 @@
         <file>main.qml</file>
         <file>CalcButton.qml</file>
         <file>AreaTextItem.qml</file>
+        <file>assets/bkt.svg</file>
+        <file>assets/division.svg</file>
+        <file>assets/equal.svg</file>
+        <file>assets/minus.svg</file>
+        <file>assets/multiply.svg</file>
+        <file>assets/percent.svg</file>
+        <file>assets/plus_minus.svg</file>
+        <file>assets/plus.svg</file>
     </qresource>
 </RCC>

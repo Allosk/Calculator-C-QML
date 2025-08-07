@@ -73,6 +73,14 @@ qrc_qml.cpp: /home/ilya/Рабочий\ стол/Projects/Calculator-C-QML/src/q
 qrc_qml.cpp: /home/ilya/Рабочий\ стол/Projects/Calculator-C-QML/src/qml/main.qml
 qrc_qml.cpp: /home/ilya/Рабочий\ стол/Projects/Calculator-C-QML/src/qml/CalcButton.qml
 qrc_qml.cpp: /home/ilya/Рабочий\ стол/Projects/Calculator-C-QML/src/qml/AreaTextItem.qml
+qrc_qml.cpp: /home/ilya/Рабочий\ стол/Projects/Calculator-C-QML/src/qml/assets/bkt.svg
+qrc_qml.cpp: /home/ilya/Рабочий\ стол/Projects/Calculator-C-QML/src/qml/assets/division.svg
+qrc_qml.cpp: /home/ilya/Рабочий\ стол/Projects/Calculator-C-QML/src/qml/assets/equal.svg
+qrc_qml.cpp: /home/ilya/Рабочий\ стол/Projects/Calculator-C-QML/src/qml/assets/minus.svg
+qrc_qml.cpp: /home/ilya/Рабочий\ стол/Projects/Calculator-C-QML/src/qml/assets/multiply.svg
+qrc_qml.cpp: /home/ilya/Рабочий\ стол/Projects/Calculator-C-QML/src/qml/assets/percent.svg
+qrc_qml.cpp: /home/ilya/Рабочий\ стол/Projects/Calculator-C-QML/src/qml/assets/plus_minus.svg
+qrc_qml.cpp: /home/ilya/Рабочий\ стол/Projects/Calculator-C-QML/src/qml/assets/plus.svg
 qrc_qml.cpp: src/qml/qml.qrc.depends
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/ilya/Рабочий стол/Projects/Calculator-C-QML/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Generating qrc_qml.cpp"
 	/usr/bin/rcc --name qml --output "/home/ilya/Рабочий стол/Projects/Calculator-C-QML/build/qrc_qml.cpp" "/home/ilya/Рабочий стол/Projects/Calculator-C-QML/src/qml/qml.qrc"

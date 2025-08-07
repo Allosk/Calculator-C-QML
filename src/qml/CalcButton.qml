@@ -9,10 +9,10 @@ Item {
     property int buttonWidth: 60
     property int buttonHeight: 60
     property color buttonColor: "lightgrey"
-    property real buttonOpacity: 1.0
     property color textColor: "black"
     property color pressedColor: "#F7E425"
-    property int textWeight: Font.Bold 
+    property int textWeight: Font.DemiBold
+    property int fontSize: 24
 
     width: buttonWidth
     height: buttonHeight
@@ -22,10 +22,9 @@ Item {
     Rectangle {
         id: rec
         width: button.buttonWidth
-        height: button.buttonHeights
+        height: button.buttonHeight
         color: mouseArea.pressed ? button.pressedColor : button.buttonColor
         radius: width / 2
-        opacity: button.buttonOpacity
         anchors.fill:parent
 
     }
@@ -34,9 +33,8 @@ Item {
         text: button.buttonText
         anchors.centerIn: parent
         color: button.textColor
-        font.pixelSize: 24
+        font.pixelSize: button.fontSize  
         font.weight: button.textWeight
-        font.family: "Open Sans"
     }
     MouseArea{
         id: mouseArea
@@ -44,7 +42,7 @@ Item {
         onClicked:{
             button.clicked(buttonText);
         }
-        // долгий тап
+
         pressAndHoldInterval: 600
         onPressAndHold: {
             button.longPressed()
