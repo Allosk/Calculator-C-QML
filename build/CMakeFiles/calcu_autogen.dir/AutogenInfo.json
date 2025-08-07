@@ -1,16 +1,16 @@
 {
-	"BUILD_DIR" : "/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu/build/calcu_autogen",
-	"CMAKE_BINARY_DIR" : "/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu/build",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu/build",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu",
+	"BUILD_DIR" : "/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML/build/calcu_autogen",
+	"CMAKE_BINARY_DIR" : "/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu/CMakeLists.txt",
-		"/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu/build/CMakeFiles/4.0.3-dirty/CMakeSystem.cmake",
+		"/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML/CMakeLists.txt",
+		"/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML/build/CMakeFiles/4.0.3-dirty/CMakeSystem.cmake",
 		"/usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/usr/share/cmake/Modules/Platform/Linux-Initialize.cmake",
-		"/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu/build/CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake",
+		"/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML/build/CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake",
 		"/usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake",
 		"/usr/share/cmake/Modules/CMakeGenericSystem.cmake",
 		"/usr/share/cmake/Modules/CMakeInitializeConfigs.cmake",
@@ -104,24 +104,24 @@
 		"/usr/lib/cmake/Qt5Qml/Qt5Qml_QQuickProfilerAdapterFactory.cmake",
 		"/usr/lib/cmake/Qt5Qml/Qt5Qml_QTcpServerConnectionFactory.cmake",
 		"/usr/lib/cmake/Qt5Qml/Qt5QmlConfigExtras.cmake",
-		"/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu/src/qml/qml.qrc"
+		"/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML/src/qml/qml.qrc"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu",
+	"CMAKE_SOURCE_DIR" : "/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML",
 	"CROSS_CONFIG" : false,
-	"DEP_FILE" : "/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu/build/calcu_autogen/deps",
+	"DEP_FILE" : "/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML/build/calcu_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "calcu_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu/src/c++/calculated.h",
+			"/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML/src/c++/calculated.h",
 			"MU",
 			"OBIEOTTUFA/moc_calculated.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu/build/calcu_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu/build/calcu_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML/build/calcu_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML/build/calcu_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"QT_CORE_LIB",
@@ -170,29 +170,29 @@
 		"-E",
 		"/usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu/build/calcu_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML/build/calcu_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
-		"/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu/build/qrc_qml.cpp"
+		"/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML/build/qrc_qml.cpp"
 	],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 8,
-	"PARSE_CACHE_FILE" : "/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu/build/CMakeFiles/calcu_autogen.dir/ParseCache.txt",
+	"PARALLEL" : 3,
+	"PARSE_CACHE_FILE" : "/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML/build/CMakeFiles/calcu_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/bin/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/bin/uic",
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 15,
-	"SETTINGS_FILE" : "/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu/build/CMakeFiles/calcu_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML/build/CMakeFiles/calcu_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu/src/c++/calculated.cpp",
+			"/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML/src/c++/calculated.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu/src/c++/main.cpp",
+			"/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML/src/c++/main.cpp",
 			"MU",
 			null
 		]
@@ -201,7 +201,7 @@
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : 
 	[
-		"/home/admin/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/calcu/build/qrc_qml.cpp"
+		"/home/ilya/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/Projects/Calculator-C-QML/build/qrc_qml.cpp"
 	],
 	"UIC_UI_FILES" : [],
 	"USE_BETTER_GRAPH" : false,

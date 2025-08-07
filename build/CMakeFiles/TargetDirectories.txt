@@ -1,5 +1,5 @@
-/home/admin/Рабочий стол/calcu/build/CMakeFiles/calcu.dir
-/home/admin/Рабочий стол/calcu/build/CMakeFiles/edit_cache.dir
-/home/admin/Рабочий стол/calcu/build/CMakeFiles/rebuild_cache.dir
-/home/admin/Рабочий стол/calcu/build/CMakeFiles/calcu_autogen_timestamp_deps.dir
-/home/admin/Рабочий стол/calcu/build/CMakeFiles/calcu_autogen.dir
+/home/ilya/Рабочий стол/Projects/Calculator-C-QML/build/CMakeFiles/calcu.dir
+/home/ilya/Рабочий стол/Projects/Calculator-C-QML/build/CMakeFiles/edit_cache.dir
+/home/ilya/Рабочий стол/Projects/Calculator-C-QML/build/CMakeFiles/rebuild_cache.dir
+/home/ilya/Рабочий стол/Projects/Calculator-C-QML/build/CMakeFiles/calcu_autogen_timestamp_deps.dir
+/home/ilya/Рабочий стол/Projects/Calculator-C-QML/build/CMakeFiles/calcu_autogen.dir

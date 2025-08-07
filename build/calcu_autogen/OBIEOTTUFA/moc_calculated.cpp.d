@@ -1,5 +1,5 @@
-/home/admin/Рабочий\ стол/calcu/build/calcu_autogen/OBIEOTTUFA/moc_calculated.cpp: /home/admin/Рабочий\ стол/calcu/src/c++/calculated.h \
-  /home/admin/Рабочий\ стол/calcu/build/calcu_autogen/moc_predefs.h \
+/home/ilya/Рабочий\ стол/Projects/Calculator-C-QML/build/calcu_autogen/OBIEOTTUFA/moc_calculated.cpp: /home/ilya/Рабочий\ стол/Projects/Calculator-C-QML/src/c++/calculated.h \
+  /home/ilya/Рабочий\ стол/Projects/Calculator-C-QML/build/calcu_autogen/moc_predefs.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

@@ -8,10 +8,6 @@ Item {
     id: areaTextItem
     property alias text: viewText.text
     property int fontSize: viewText.font.pixelSize
-
-    width: 550
-    height: 50
-
     Calculated {
         id: calcEngine
     }
@@ -25,8 +21,28 @@ Item {
         id: areaText
         width: parent.width
         height: parent.height
-        color: "lightgreen"
-        border.color: "black" 
+        color: "transparent"
+        clip: true
+
+        // Верхняя часть — прямоугольник без скругления
+        Rectangle {
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.right: parent.right
+            height: parent.height - 32  // высота минус удвоенный радиус
+            color: "#04BFAD"
+            radius: 0
+        }
+
+        // Нижняя часть — прямоугольник со скругленными углами
+        Rectangle {
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.bottom: parent.bottom
+            height: 64  // двойной радиус (2 * 32)
+            color: "#04BFAD"
+            radius: 32
+        }
 
         Label {
             id: viewText
@@ -34,23 +50,22 @@ Item {
             font.pixelSize: fontSize
             anchors.verticalCenter: parent.verticalCenter
             anchors.right: parent.right
-            rightPadding: 10
+            rightPadding: 20
             leftPadding: 10
 
-            // Сигнал изменения размера
             onTextChanged: adjustFontSize()
 
-            // Функция для динамического уменьшения шрифта
             function adjustFontSize() {
                 var textWidth = viewText.width
-                var containerWidth = areaText.width // учтены отступы
+                var containerWidth = areaText.width
 
-                // Уменьшаем размер шрифта, если текст не помещается
                 while (textWidth > containerWidth && viewText.font.pixelSize > 8) {
                     viewText.font.pixelSize -= 1
-                    textWidth = viewText.width // Пересчитываем ширину текста после изменения шрифта
+                    textWidth = viewText.width
                 }
             }
         }
     }
+
+
 }
