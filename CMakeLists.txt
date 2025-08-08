@@ -16,8 +16,8 @@ find_package(Qt5 COMPONENTS Core Gui Widgets Quick REQUIRED)
 qt5_add_resources(QML_RESOURCES src/qml/qml.qrc)
 
 add_executable(calcu
-    src/c++/main.cpp 
-    src/c++/calculated.cpp
+    src/cpp/main.cpp 
+    src/cpp/calculated.cpp
 
     ${QML_RESOURCES}
 )

@@ -1,0 +1,30 @@
+# Build folders
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Qt Creator / VS Code configs
+*.user
+*.pro.user
+*.qbs.user
+*.qmlproject.user
+*.creator.user
+*.workspace
+.vscode/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Object files / binaries
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+
